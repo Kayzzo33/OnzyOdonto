@@ -38,12 +38,11 @@ const TreatmentCard: React.FC<{ position: [number, number, number]; text: string
                         opacity={0.8}
                     />
                 </mesh>
-                {/* Text on plate */}
+                {/* Text on plate - FONT REMOVED TO PREVENT CRASH */}
                 <Text
                     position={[0, 0, 0.06]}
                     fontSize={0.25}
-                    color="#000000" // Black text on glass for readability or Cyan
-                    font="https://fonts.gstatic.com/s/orbitron/v25/yMJRMI86ZGomt_47Ww8.woff"
+                    color="#000000"
                     anchorX="center"
                     anchorY="middle"
                 >
@@ -71,10 +70,10 @@ const TreatmentSection: React.FC = () => {
 
   return (
     <group>
+      {/* Main Title - FONT REMOVED TO PREVENT CRASH */}
       <Text 
         position={[0, 3, 0]} 
         fontSize={0.8} 
-        font="https://fonts.gstatic.com/s/orbitron/v25/yMJRMI86ZGomt_47Ww8.woff"
         color="#ffffff"
       >
         NOSSOS TRATAMENTOS

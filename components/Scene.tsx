@@ -37,6 +37,9 @@ const Scene: React.FC = () => {
   };
 
   useFrame((state, delta) => {
+    // Safety check: ensure scroll data is available
+    if (!scroll) return;
+
     // 1. Camera Movement along Z based on scroll
     // We map scroll offset (0 to 1) to Z position (5 to -65)
     // scroll.offset is 0 at top, 1 at bottom

@@ -25,12 +25,12 @@ const App: React.FC = () => {
         dpr={[1, 2]}
         camera={{ position: [0, 0, 5], fov: 50 }}
         gl={{ antialias: true, alpha: true }}
-        className="touch-none"
+        className="touch-none pointer-events-none" // Ensure pointer events pass through for scroll
       >
         <color attach="background" args={['#050510']} />
         
-        {/* Fog to hide the loading of far objects and enhance depth */}
-        <fog attach="fog" args={['#050510', 5, 30]} />
+        {/* Fog to hide the loading of far objects and enhance depth - Adjusted to start further back */}
+        <fog attach="fog" args={['#050510', 10, 40]} />
 
         {/* Suspense handles async loading (fonts, models) to prevent blank screens */}
         <Suspense fallback={null}>
